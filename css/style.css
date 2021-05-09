@@ -1,0 +1,252 @@
+/* وتعيين اسم ومسار الخط CSS إلى ملف Cairo-SemiBold.ttf إضافة نوع الخط */
+@font-face{
+    font-family: ar-font;
+    src:url(../fonts/Cairo-SemiBold.ttf);
+}
+body{
+    direction: rtl;
+    font-family: ar-font;
+}
+header{
+    background: url("../img/header-bg.jpg") #00000040;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center center;
+}
+header .brand{
+    /* تطبيق حشوة وهامش لشعار الصفحة */
+    margin: 80px auto 50px;
+    padding: 20px 10px;   /*من الاعلى20 والاسفل
+    10 من اليمين واليسار*/
+    border-bottom: 5px solid #474c55; /*ياخذ الخط كل الصفحة   وذلك لان الشعار ضمن الحاوية 
+    divالتي تاخذ display:block لذلك سوف نغيره 
+    حتى يكون الخط اسفل الشعار فقط */
+    /* جعل عرض الخط بعرض الشعار */
+    display: inline-block;
+}
+/* تحديد حجم الخط وشدته والتباعد بين الأسطر واللون للعنوان الرئيسي */
+header .page-heading h1 {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 75px;
+    color: #fff; 
+  }
+  /* وجعل عرض الفقرة 40% من قيمة عرض الصفحة p تحديد حجم الخط والتباعد بين الأسطر واللون للفقرة */
+header .page-heading p {
+    width: 40%; /*بدلا من وضع brبين الاسطر
+    وحتى تكون متجاوبة  مع مختلف  الشاشات*/
+    font-size: 18px;
+    line-height: 25px;
+    color: #acacac; 
+    margin: 0 auto;
+}
+/* تطبيق تنسيقات الخط على الأرقام، وجعلها في أسطر مختلفة */
+header .counter .is-countdown .countdown-section .countdown-amount{
+    display: block;
+    font-size: 60px;
+    color: #ffce00;
+    font-weight: bold;
+}
+header .counter .is-countdown .countdown-section .countdown-period{
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+}
+header .counter .is-countdown .countdown-section{
+    display: inline-block;
+    margin: 0 20px;
+}
+header .counter{
+    margin: 60px auto;
+    padding: 30px;
+}
+header .send-notification p {
+    font-size: 18px;
+    color: #fff; 
+}
+
+/* تنسيق الخط والحدود داخل نموذج البريد الإلكتروني */
+header .send-notification .input-group input {
+    border-radius: 0;
+    font-size: 18px;
+    font-family: ar-font;
+    color: #e6e6e6;
+    border-width: 2px;
+    border-color: #e6e6e6; 
+}
+header .send-notification .input-group button{
+    background-color:#ffce00 ;
+    padding:0.5rem 1.5rem;
+    border-radius: 0;/*لالغاء استدارة الزوايا  التي يعطيها بوتستراب */
+}
+header .send-notification .input-group{
+    width: 30%;
+    margin: 0 auto;
+}
+/*تحديد طول حقل الادخال ليتناسب مع طول زر الارسال*/
+/* التى يستخدمها المدرب bootstrap يمكننا الاستغناء عن تحديد طول حقل الادخال فى النسخة المستخدمة من مكتبة*/
+header .send-notification .input-group input {
+    height: auto;
+    box-shadow: none;
+}
+header .send-notification .input-group .alert{
+    position: absolute;
+    top:110%;
+    margin-right: auto ;
+    margin-left:auto ;
+    display: none;
+}
+section.features h2 {
+    margin-bottom: 50px;
+    font-size: 45px;
+    color: #555; 
+}
+section.features {
+    padding: 100px 0;
+    position: relative;
+    text-align: right;
+}
+section.features div[class*="col-"]:nth-child(even){
+    text-align: left;
+}/* يجب وضع النجمة* قبل  اشارة المساواةحتى يعمل التنسيق*/
+
+section.features .media {
+    border:4px solid #fafafa;
+    padding: 45px 10px;
+    margin-bottom: 20px;
+    position: relative;
+    max-height: 190px;
+}
+**
+section.features .media .media-body h5{
+    font-size: 24px;
+    color: rgb(37, 35, 35);
+}
+section.features .media .media-body p{
+    font-size: 15px;
+    line-height: 25px;
+    color: #9c9c9c;
+}
+/* إضافة الصورة إلى خلفية تذييل الصفحة وتوسيطها */
+footer {
+    background-image: url(../img/footer-bg.jpg); /* #00000040;
+    background-blend-mode: multiply; */
+    background-size: cover;
+    background-position: center center; 
+}
+/* إضافة الطبقة الصفراء الشفافة على الخلفية وضبط الحاشية الخاصة بها */
+footer .top-footer .overlay {
+    background-color: rgba(255, 204, 0, 0.7);
+    padding: 60px 0; 
+}
+/* التنسيقات المطبقة على خط العنوان */
+footer .top-footer .overlay h3 {
+    font-size: 30px;
+    width: 80%;
+    margin: 0 auto 30px; 
+}
+/* تصغير حجم نموذج الإرسال وضبط الحاشية والهامش */
+footer .top-footer .overlay .input-group {
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
+}
+/* تنسيق صندوق الإدخال */
+footer .top-footer .overlay .input-group input:hover, footer .top-footer .overlay .input-group input:focus {
+    box-shadow: 0 0 0;
+    border-color: #fff;
+}
+/* تنسيق زر نموذج الإرسال */
+footer .top-footer .overlay .input-group button {
+    border-radius: 0;
+    background-color: #393939;
+    padding: .5rem 1.5rem;
+}
+/* تغير لون الزر عند مرور مؤشر الفأرة فوقه */
+footer .top-footer .overlay .input-group button:hover, footer .top-footer .overlay .input-group button:focus {
+    box-shadow: 0 0 0;
+    border-color: transparent;
+}
+/* تنسيق رسالة الخطأ التي تظهر عند إدخال معلومات خاطئة في النموذج */
+footer .top-footer .overlay .alert {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    left: 0;
+}
+/* تنسيق طول حقل الإدخال */
+footer .top-footer .overlay .input-group input {
+    height: auto;
+}
+footer .contact .overlay{
+    background-color: rgba(28, 28, 28, 0.7);
+    padding: 60px 0 10px;
+    color: #fff; 
+}
+/* h3 تنسيق اللون وحجم الخط في العنوان */
+footer .contact .overlay h3 {
+    font-size: 30px;
+    margin: 0 auto 30px; 
+}
+footer .contact .overlay ul li a{
+    width: 70px;
+    height:70px ;
+    line-height:70px ;/*حتى تظهر بالوسط*/
+    display: block;/*حتى تهر تنسيقات العرضوالطول*/
+    background-color: rgba(255, 255, 255, 0.14);
+    color: #fff;
+}
+/* تطبيق هامش على الأيقونات */
+footer .contact .overlay ul li {
+    margin: 0 5px 10px; 
+}
+/* تغير لون خلفية الأيقونات عند مرور مؤشر الفأرة عليها */
+footer .contact .overlay ul li a.facebook:hover {
+    background-color: #3b5999; 
+}
+footer .contact .overlay ul li a.twitter:hover {
+    background-color: #55acee; 
+}
+footer .contact .overlay ul li a.linkedin:hover {
+    background-color: #0077B5; 
+}
+footer .contact .overlay ul li a.instagram:hover {
+    background-color: #e4405f; 
+} 
+/* إضافة خط أفقي تحت الأيقونات */
+footer .contact .overlay hr {
+    width: 25%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 50px; 
+}
+/* تنسيق أيقونة الظرف وإضافة مسافة بينها وبين البريد الإلكتروني */
+footer .contact .overlay p a {
+    color: #b4b4b4; 
+}
+footer .contact .overlay p a i {
+    color: #ffce00;
+    margin-left: 5px; 
+}
+/*تنسيق مسؤول عن درجة نعومة التأثير*/
+footer .contact .overlay ul li a {
+    -webkit-transition: all 0.3s ease;
+    Transition: all 0.3s ease;
+}
+
+/* منع الحركةبالتلفون لاعطاءها فاعلية اكبر عند تحميل  الصفحة ضمن الموبايل */
+@media ( max-width: 768px){
+    header .animate__bounceIn{
+        animation-name: none !important;
+    }
+    .animate__fadeInUp{
+        animation-name: none !important;
+    }
+    .animate__fadeInDown{
+    animation-name: none !important;
+    }
+    .animate__zoomIn{
+    animation-name: none !important;
+    }
+}
