@@ -179,6 +179,7 @@ footer .top-footer .overlay .alert {
 /* تنسيق طول حقل الإدخال */
 footer .top-footer .overlay .input-group input {
     height: auto;
+    border-radius: 0;
 }
 footer .contact .overlay{
     background-color: rgba(28, 28, 28, 0.7);
@@ -234,9 +235,13 @@ footer .contact .overlay ul li a {
     -webkit-transition: all 0.3s ease;
     Transition: all 0.3s ease;
 }
-
+@media (max-width: 991px){
+    section.features .media{
+        max-height: 226px;
+    }
+}
 /* منع الحركةبالتلفون لاعطاءها فاعلية اكبر عند تحميل  الصفحة ضمن الموبايل */
-@media ( max-width: 768px){
+@media (max-width: 767px){
     header .animate__bounceIn{
         animation-name: none !important;
     }
@@ -248,5 +253,66 @@ footer .contact .overlay ul li a {
     }
     .animate__zoomIn{
     animation-name: none !important;
+    }
+    header .send-notification .input-group{
+        width: 50% !important;
+    }
+    footer .top-footer .overlay .input-group{
+        width: 70% !important;
+    }
+    footer .contact .overlay ul{
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 0px;
+    }
+}
+@media (max-width: 616px){
+
+    header .page-heading h1{
+        font-size: 45px;
+    }
+    header .page-heading p{
+        width: 50%;
+        font-size: 14px;
+    }
+    header .counter .is-countdown .countdown-section .countdown-amount{
+        font-size: 30px;
+    }
+    header .counter .is-countdown .countdown-section .countdown-period{
+        font-size: 20px;
+    }
+    header .counter .is-countdown .countdown-section{
+        margin: 0 10px;
+    }
+    header .send-notification .input-group input{
+        font-size: 14px;
+    }
+    header .send-notification .input-group button{
+        padding: 0.5rem;
+    }
+    header .send-notification .input-group{
+        width: 70% !important;
+    }
+    section.features .media{
+        padding: 38px 8px;
+        max-height: 265px;
+    }
+    footer .top-footer .overlay h3{
+        font-size: 23px;
+        width: 85%;
+    }
+    footer .top-footer .overlay .input-group{
+        width: 70% !important;
+    }
+    footer .top-footer .overlay .input-group input{
+        font-size: 14px;
+    }
+    footer .top-footer .overlay .input-group button{
+        padding: 0.5rem;
+    }
+    footer .contact .overlay ul li a {
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
     }
 }
